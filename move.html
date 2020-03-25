@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>move</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    Zoek het midden...
+    <br>
+    <div id="menu">
+        <button type="button" onclick="veranderChocoGroen()">groene choco</button><br>
+        <button type="button" onclick="veranderChoco()">choco</button><br>
+        <button type="button" onclick="veranderNathan()">nathan</button><br>
+        <button type="button" onclick="veranderBob()">bobke den bouwer</button><br>
+        <button type="groen" onclick="veranderGroen()">groen</button><br>
+        <button type="rood" onclick="veranderRood()">rood</button>
+    </div>
+    <div id="board">
+        <div id="animate"></div>
+    </div>
+    <div id="moveCounter">aantal bewegingen: </div>
+    <button type="button" onclick="moveUp()">boven</button><br>
+    <button type="button" onclick="moveLeft()">links</button>
+    <button type="button" onclick="moveRight()">rechts</button><br>
+    <button type="button" onclick="moveDown()">onder</button>
+
+    <script>
+        var posx = 0;
+        var posy = 0;
+        var moves = 0;
+        var left = 37;
+        var up = 38;
+        var right = 39;
+        var down = 40;
+        var audio = new Audio('move.mp3');
+        var win = new Audio('win.mp3');
+
+
+        function veranderRood() {
+            document.getElementById("animate").style.backgroundColor = "red";
+            document.getElementById("animate").style.backgroundImage = "";
+        }
+
+        function veranderGroen() {
+            document.getElementById("animate").style.backgroundColor = "green";
+            document.getElementById("animate").style.backgroundImage = "";
+        }
+
+        function veranderChoco() {
+            document.getElementById("animate").style.backgroundImage = "url(choco1.png)";
+            document.getElementById("animate").style.backgroundColor = "transparent";
+        }
+
+        function veranderChocoGroen() {
+            document.getElementById("animate").style.backgroundImage = "url(chocogroen.png)";
+            document.getElementById("animate").style.backgroundColor = "transparent";
+        }
+
+        function veranderNathan() {
+            document.getElementById("animate").style.backgroundImage = "url(nathan.png)";
+            document.getElementById("animate").style.backgroundColor = "transparent";
+        }
+
+        function veranderBob() {
+            document.getElementById("animate").style.backgroundImage = "url(bob.png)";
+            document.getElementById("animate").style.backgroundColor = "transparent";
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function moveUp() {
+            var bol = document.getElementById("animate");
+            if (posy <= 0) {
+                bol.style.top = 0 + 'px';
+            } else {
+                posy -= 5;
+                bol.style.top = posy + 'px';
+                audio.play();
+                moves++;
+                document.getElementById("moveCounter").innerHTML = "aantal bewegingen: " + moves;
+            }
+            if ((posx == 175) && (posy == 175)) {
+                left = up = right = down = null;
+                $("#animate").fadeOut(2000);
+                await sleep(2000);
+                document.write("Je zat in het midden met " + moves + " bewegingen");
+                win.play();
+            }
+        }
+
+        async function moveLeft() {
+            var bol = document.getElementById("animate");
+            if (posx <= 0) {
+                bol.style.left = 0 + 'px';
+            } else {
+                posx -= 5;
+                bol.style.left = posx + 'px';
+                audio.play();
+                moves++;
+                document.getElementById("moveCounter").innerHTML = "aantal bewegingen: " + moves;
+            }
+            if ((posx == 175) && (posy == 175)) {
+                left = up = right = down = null;
+                $("#animate").fadeOut(2000);
+                await sleep(2000);
+                document.write("Je zat in het midden met " + moves + " bewegingen");
+                win.play();
+            }
+        }
+
+        async function moveRight() {
+            var bol = document.getElementById("animate");
+            if (posx >= 350) {
+                bol.style.left = 350 + 'px';
+            } else {
+                posx += 5;
+                bol.style.left = posx + 'px';
+                audio.play();
+                moves++;
+                document.getElementById("moveCounter").innerHTML = "aantal bewegingen: " + moves;
+            }
+            if ((posx == 175) && (posy == 175)) {
+                left = up = right = down = null;
+                $("#animate").fadeOut(2000);
+                await sleep(2000);
+                document.write("Je zat in het midden met " + moves + " bewegingen");
+                win.play();
+            }
+        }
+
+        async function moveDown() {
+            var bol = document.getElementById("animate");
+            if (posy >= 350) {
+                bol.style.top = 350 + 'px';
+            } else {
+                posy += 5;
+                bol.style.top = posy + 'px';
+                audio.play();
+                moves++;
+                document.getElementById("moveCounter").innerHTML = "aantal bewegingen: " + moves;
+            }
+            if ((posx == 175) && (posy == 175)) {
+                left = up = right = down = null;
+                $("#animate").fadeOut(2000);
+                await sleep(2000);
+                document.write("Je zat in het midden met " + moves + " bewegingen");
+                win.play();
+            }
+        }
+
+        document.onkeydown = function (evt) {
+            evt = evt || window.event;
+            switch (evt.keyCode) {
+                case left:
+                    moveLeft();
+                    break;
+                case up:
+                    moveUp();
+                    break;
+                case right:
+                    moveRight();
+                    break;
+                case down:
+                    moveDown();
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

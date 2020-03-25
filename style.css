@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#menu {
+    float: left;
+}
+
+#menu button {
+    width: auto;
+    float: left;
+    padding: 5px;
+}
+
+#board {
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    background-color: yellow;
+    /*background-image: url("choco1.png");
+    background-repeat: repeat;*/
+    border: 6px solid green;
+}
+
+#animate {
+    background-color: green;
+    /*background-image: url(choco1.png);*/
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 25px;
+}
+
+button {
+    width: 75px;
+}
