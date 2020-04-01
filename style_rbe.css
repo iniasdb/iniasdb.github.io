@@ -1,0 +1,93 @@
+html {
+  background-color: black;
+}
+
+body {
+  margin: 0;
+}
+
+#logo {
+  max-width: 7%;
+  float: left;
+}
+
+.nav .header {
+  height: fit-content;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 18.5px;
+}
+
+.nav ul li {
+  padding: 1.7% 3%;
+  display: inline-block;
+  /*float: left;*/
+  text-align: center;
+}
+
+.nav ul li a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+  text-decoration: none;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.nav ul li a:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0;
+}
+
+.social {
+  float: left;
+}
+
+.fb img {
+  padding-bottom: 0.5%;
+  max-width: 2%;
+}
+
+.insta img {
+  max-width: 2%;
+}
+
+.foto img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  margin: 0 10%;
+}
+
+h1 {
+  font-size: 2.5vw;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+.covers {
+  margin: 0 10%;
+}
+
+.covers img {
+  padding-left: 2%;
+  padding-top: 1%;
+  max-width: 30%;
+}
