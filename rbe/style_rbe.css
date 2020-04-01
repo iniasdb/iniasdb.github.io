@@ -10,6 +10,11 @@ body {
   float: left;
 }
 
+#logo:hover {
+  max-width: 6%;
+  padding: 0.5%;
+}
+
 .nav .header {
   height: fit-content;
 }
