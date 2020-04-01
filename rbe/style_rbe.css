@@ -99,6 +99,7 @@ p {
 
 .boxheader {
   margin: 5% 10% 0 10%;
+  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
   background-color: #171616;
