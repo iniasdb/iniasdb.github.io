@@ -276,12 +276,16 @@ hr {
 }
 
 @media screen and (max-width: 1024px) {
-  .footer {
+  /*.footer {
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: black;
     margin-bottom: 0;
+  }*/
+  
+    .box {
+    margin-bottom: 10%;
   }
 
   .covers {
