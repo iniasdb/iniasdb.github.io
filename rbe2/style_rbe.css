@@ -1,0 +1,545 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+/* start header */
+
+.a {
+  max-width: 100%;
+}
+
+#logo {
+  max-width: 7%;
+  float: left;
+}
+
+#logo:hover {
+  max-width: 6%;
+  padding: 0.5%;
+}
+
+.nav .header {
+  height: fit-content;
+}
+
+.nav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 18.5px;
+}
+
+.nav ul li {
+  padding: 1.7% 3%;
+  display: inline-block;
+  /*float: left;*/
+  text-align: center;
+}
+
+.nav ul li a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+  text-decoration: none;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
+
+.nav ul li a:hover {
+  border-top: 4px solid #ffffff;
+  border-bottom: 4px solid #ffffff;
+  padding: 6px 0;
+}
+
+/* end header */
+
+/* start home page */
+
+.foto img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  color: white;
+  margin: 0 10%;
+}
+
+h1 {
+  font-size: 2.5vw;
+  color: white;
+}
+
+p {
+  font-size: 1.5vw;
+  color: white;
+}
+
+.spotifyplayer {
+  width: 100%;
+}
+
+/* end homepage */
+
+/* start music page */
+
+.covers {
+  margin: 0 10%;
+}
+
+.covers img {
+  padding-left: 2%;
+  padding-top: 1%;
+  max-width: 30%;
+}
+
+.covers img:hover {
+  opacity: 0.7;
+  animation: bump 1.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes bump {
+  0% {
+    transform: translate(0px, -5px) rotate(0deg);
+  }
+  25% {
+    transform: translate(0px, -10px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0px, 5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@-o-keyframess bump {
+  0% {
+    transform: translate(0px, -5px) rotate(0deg);
+  }
+  25% {
+    transform: translate(0px, -10px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0px, 5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@-moz-keyframes bump {
+  0% {
+    transform: translate(0px, -5px) rotate(0deg);
+  }
+  25% {
+    transform: translate(0px, -10px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0px, 5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@-webkit-keyframes bump {
+  0% {
+    transform: translate(0px, -5px) rotate(0deg);
+  }
+  25% {
+    transform: translate(0px, -10px) rotate(0deg);
+  }
+  50% {
+    transform: translate(0px, 5px) rotate(0deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+/* end musicpage */
+
+/* start calendar and news page */
+
+.boxheader {
+  margin: 5% 10% 0 10%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: #171616;
+  text-align: center;
+  color: white;
+  padding: 1.2%;
+}
+
+.boxheader h1 {
+  font-size: 3vw;
+  margin: 0;
+}
+
+.box {
+  margin: 0 10%;
+  padding: 2.5% 2.5% 0 2.5%;
+  background-color: #262424;
+  text-align: center;
+  color: white;
+}
+
+.box img {
+  max-width: 90%;
+  padding-top: 2%;
+}
+
+.box hr:last-child {
+  visibility: hidden;
+}
+
+/* end calendar and news page */
+
+/* start contact page */
+
+.text h1 {
+  text-align: center;
+}
+
+.text p {
+  margin: 0 10% 10% 12%;
+  max-width: 18%;
+  float: left;
+}
+
+form span {
+  color: red;
+}
+
+.form {
+  float: left;
+  color: white;
+  font-size: 1.5vw;
+  width: 48%;
+  margin-bottom: 2%;
+}
+
+.form input,
+textarea {
+  margin-left: 10px;
+  margin-bottom: 1.5%;
+  width: 70%;
+  padding: 1% 1.5%;
+  border-radius: 10px;
+  display: inline-block;
+  float: right;
+  background-color: #c8c8c8;
+}
+
+label {
+  display: inline-block;
+  padding: 1.5%;
+  float: left;
+  clear: left;
+  text-align: right;
+}
+
+.form button {
+  float: right;
+  clear: both;
+  border-radius: 10px;
+  width: 20%;
+  max-width: 20%;
+  padding: 2% 0;
+  background-color: #c8c8c8;
+}
+
+fieldset {
+  padding: 5%;
+  border-style: dotted;
+}
+
+/* end contact page */
+
+/* start footer */
+
+hr {
+  margin: 5% 2% 2% 1%;
+}
+
+.footer {
+  clear: both;
+  margin: 0 10% 2% 10%;
+}
+
+.footer img {
+  max-width: 5%;
+  margin: 0 7% 0 7%;
+}
+
+.footer img:hover {
+  max-width: 4%;
+  padding: 0.5%;
+}
+
+/* end footer */
+
+/* start footer for 404 page */
+
+.footer404 {
+  margin: 0 10% 2% 10%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.footer404 img {
+  max-width: 5%;
+  margin: 0 7% 0 7%;
+}
+
+.footer404 img:hover {
+  max-width: 4%;
+  padding: 0.5%;
+}
+
+/* end footer for 404 page */
+
+/* start admin login page */
+
+.login {
+  margin: 200px auto;
+  width: 500px;
+  color: white;
+  background-color: grey;
+}
+
+.login input {
+  margin: 0 auto;
+  width: 300px;
+}
+
+/* end admin login page*/
+
+/* start message page */
+
+.adminnav ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-left: 18.5px;
+}
+
+.adminnav ul li {
+  display: inline-block;
+  float: right;
+  padding: 10px;
+}
+
+.adminnav ul li a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+table {
+  margin: 50px auto;
+  border: 5px solid black;
+  width: 100px;
+}
+
+td {
+  border: 1px solid black;
+  word-wrap: break-word;
+  padding: 10px;
+}
+
+tr.legend td {
+  background-color: lightgray;
+}
+
+.gotologin {
+  width: 100px;
+  height: 50px;
+  background-color: #090808;
+}
+
+/* end message page*/
+
+/* start adminpanel */
+
+.editMusic {
+  margin: 100px auto;
+  width: 500px;
+}
+
+.editCalendar {
+  margin: 100px auto;
+  width: 500px;
+}
+
+.editNews {
+  margin: 100px auto;
+  width: 500px;
+}
+
+.editNews textarea {
+  margin-left: 0px;
+  margin-bottom: 0;
+  width: 70%;
+  padding: 1% 1.5%;
+  border-radius: 10px;
+  display: inline-block;
+  float: none;
+  background-color: white;
+}
+
+/* end adminpanel*/
+
+.editMusic h1.define {
+  font-size: 2.5vw;
+}
+
+/* end adminpage */
+
+/* start responsive */
+
+/* phone */
+
+@media screen and (max-width: 600px) {
+  .footer {
+    margin: 0 5% 2% 5%;
+  }
+
+  .footer img {
+    max-width: 5%;
+    margin: 0 5% 0 5%;
+  }
+
+  .footer img:first-child {
+    margin-left: 8%;
+  }
+
+  .box {
+    font-size: 3vw;
+    padding: 3%;
+  }
+
+  p {
+    font-size: 2.5vw;
+  }
+
+  .gotologin {
+    display: none;
+  }
+
+  .form {
+    clear: both;
+    margin: 0 5% 15% 5%;
+    width: 90%;
+  }
+
+  .form input,
+  textarea {
+    margin-left: 10px;
+    margin-bottom: 1.5%;
+    width: 65%;
+    padding: 1% 1.5%;
+  }
+
+  label {
+    margin-top: 10px;
+    font-size: 3vw;
+    display: inline-block;
+    padding: 1.5%;
+    float: left;
+    clear: left;
+    text-align: right;
+  }
+
+  label:first-child {
+    margin-top: 0;
+  }
+
+  .text h1 {
+    text-align: center;
+    font-size: 8vw;
+    margin-bottom: 0;
+  }
+
+  .text p {
+    padding-top: 0;
+    margin: 0 10% 10% 12%;
+    max-width: none;
+    float: none;
+    font-size: 3.5vw;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    margin: 0;
+  }
+
+  .covers img {
+    padding-left: 5%;
+    padding-top: 1%;
+    padding-bottom: 10%;
+    max-width: 40%;
+  }
+
+  .gotologin {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .foto {
+    z-index: 10;
+  }
+
+  .footer {
+    margin: 0;
+    z-index: 0;
+  }
+}
+
+/* ipad */
+
+@media screen and (max-width: 800px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /*.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    margin-bottom: 0;
+  }*/
+
+  .box {
+    margin-bottom: 10%;
+  }
+
+  .covers {
+    margin-bottom: 10%;
+  }
+}
