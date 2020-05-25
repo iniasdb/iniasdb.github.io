@@ -1,0 +1,64 @@
+body {
+  background-color: skyblue;
+}
+
+.content {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 250px;
+  background-color: darkslategray;
+  color: white;
+  font-size: 30px;
+  line-height: 90px;
+  border-radius: 20px;
+  float: left;
+  margin: 25px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.box:hover {
+  background-color: #3b6363;
+  cursor: pointer;
+}
+
+.list {
+  color: white;
+  display: none;
+  font-size: 10px;
+}
+
+.list ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  padding-left: 50px;
+  list-style: none;
+}
+
+.list ul li {
+  font-size: 20px;
+}
+
+.list ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.list ul li a:hover {
+  font-size: 21px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 250px;
+  }
+
+  .box {
+    float: none;
+    margin: 25px 0;
+  }
+}

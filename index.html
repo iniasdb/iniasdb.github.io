@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="box" onclick="showList('java')">Java
+            <div class="list" id="java">
+                <ul>
+                    <li><a href="">software oefeningen</a></li>
+                    <li><a href="https://github.com/iniasdb/todolist" target="_blank">to do list</a></li>
+                    <li><a href="">image to ascii</a></li>
+                    <li><a href="">morsecode</a></li>
+                    <li><a href="">navo alphabet</a></li>
+                    <li><a href="">tic tac toe</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" onclick="showList('htmlcss')">html & css
+            <div class="list" id="htmlcss">
+                <ul>
+                    <li><a href="https://iniasdb.github.io/rbe2/home.html" target="_blank">rbe</a></li>
+                    <li><a href="https://iniasdb.github.io/sint jozef/home.html" target="_blank">sint jozef</a></li>
+                    <li><a href="" target="_blank">oefeningen</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" onclick="showList('js')">javascript
+            <div class="list" id="js">
+                <ul>
+                    <li><a href="https://iniasdb.github.io/game/move.html" target="_blank">move</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" onclick="showList('python')">python
+            <div class="list" id="python">
+                <ul>
+                    <li>snake</li>
+                </ul>
+            </div>
+        </div>
+        <a href="https://github.com/" target="_blank">
+            <div class="box"">c++
+        </div></a>
+    </div>
+    <script>
+        var i = 0;
+
+        function showList(x) {
+            if (i == 0) {
+                document.getElementById(x).style.display = 'initial';
+                i = 1;
+            } else {
+                document.getElementById(x).style.display = 'none';
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
