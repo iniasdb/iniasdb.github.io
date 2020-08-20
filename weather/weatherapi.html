@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="600">
+    <title>weather</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon">
+
+    <script>
+        //initialize variables
+        var lon, lat, weatherType, weatherIcon, weatherIconUrl, temp, feelsLikeTemp, tempMin, tempMax, pressure, humidity, visibilityM, visibilityKM, windSpeed, cloudiness, timeOfCalculationUnix, sunriseUnix, sunsetUnix, timeOfCalculation, sunrise, sunset, city, country;
+
+        const apiCall = async () => {
+            const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=boom&units=metric&appid=a1b0b1d1ba758ad4a0971f19cc475c39'); //make api call
+            const myJson = await response.json(); //extract JSON from the http response
+
+            lon = myJson.coord.lon;
+            lat = myJson.coord.lat;
+            weatherType = myJson.weather[0].description;
+            weatherIcon = myJson.weather[0].icon;
+            weatherIconUrl = "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png";
+            temp = Math.round(myJson.main.temp);
+            feelsLikeTemp = Math.round(myJson.main.feels_like);
+            tempMin = Math.round(myJson.main.temp_min);
+            tempMax = Math.round(myJson.main.temp_max);
+            pressure = myJson.main.pressure;
+            humidity = myJson.main.humidity;
+            visibilityM = myJson.visibility;
+            visibilityKM = Math.round(((visibilityM / 1000) * 100) / 100);
+            windSpeed = myJson.wind.speed;
+            cloudiness = myJson.clouds.all;
+            timeOfCalculationUnix = myJson.dt;
+            timeOfCalculation = convertUnix(timeOfCalculationUnix);
+            sunriseUnix = myJson.sys.sunrise;
+            sunrise = convertUnix(sunriseUnix);
+            sunsetUnix = myJson.sys.sunset;
+            sunset = convertUnix(sunsetUnix);
+            city = myJson.name;
+            country = myJson.sys.country;
+
+            document.getElementById('location').innerHTML = city + " " + country;
+            document.getElementById('temp').innerHTML = temp + "°C";
+            document.getElementById('fl').innerHTML = feelsLikeTemp + "°C";
+            document.getElementById('wind').innerHTML = windSpeed * 3.6 + " kph";
+            document.getElementById('pressure').innerHTML = pressure + " hPa";
+            document.getElementById('visibility').innerHTML = visibilityKM + " km";
+            document.getElementById('humidity').innerHTML = humidity + "%";
+            document.getElementById('cloudiness').innerHTML = cloudiness + "%";
+            document.getElementById('sunrise').innerHTML = sunrise;
+            document.getElementById('sunset').innerHTML = sunset;
+
+            switch (weatherIcon) {
+                case '01d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/clear sky.png')";
+                    break;
+                case '01n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/clear sky night.png')";
+                    break;
+                case '02d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/few clouds.jpg')";
+                    break;
+                case '02n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/few clouds night.jpg')";
+                    break;
+                case '03d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/few clouds.jpg')";
+                    break;
+                case '03n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/few clouds night.jpg')";
+                    break;
+                case '04d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/broken clouds.jpg')";
+                    break;
+                case '04n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/broken clouds night.jpg')";
+                    break;
+                case '09d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/rain.jpg')";
+                    break;
+                case '09n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/rain night.jpg')";
+                    break;
+                case '10d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/rain.jpg')";
+                    break;
+                case '10n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/rain night.jpg')";
+                    break;
+                case '11d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/thunderstorm.jpg')";
+                    break;
+                case '11n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/thunderstorm night.jpg')";
+                    break;
+                case '13d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/snow.jpg')";
+                    break;
+                case '13n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/snow night.jpg')";
+                    break;
+                case '50d':
+                    document.getElementById('bg').style.backgroundImage = "url('images/fog.jpg')";
+                    break;
+                case '50n':
+                    document.getElementById('bg').style.backgroundImage = "url('images/fog night.jpg')";
+                    break;
+                default:
+                    document.getElementById('bg').style.backgroundImage = "url('images/nightsky.jpg')";
+            }
+        }
+
+
+
+        function convertUnix(timestamp) {
+            //to miliseconds
+            var date = new Date(timestamp * 1000);
+            var hours = date.getHours();
+            var minutes = "0" + date.getMinutes();
+            var seconds = "0" + date.getSeconds();
+            var time = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+
+            return time;
+        }
+
+
+    </script>
+</head>
+
+<body onload="apiCall()">
+
+    <div class="bg center" id="bg">
+        <div class="time">
+            <p id="time"></p>
+            </>
+            <div class="weather">
+                <h1 id="location"></h1>
+                <h1 id="temp"></h1>
+                <h3>Feels like <span id="fl"></span> Wind <span id="wind"></span> Barometer <span id="pressure"></span>
+                </h3>
+                <h3>Visibility <span id="visibility"></span> Humidity <span id="humidity"></span> Cloudiness <span
+                        id="cloudiness"></span></h3>
+                <h3>Sunrise <span id="sunrise"></span> Sunset <span id="sunset"></span></h3>
+            </div>
+        </div>
+
+
+        <script>
+            var dt = new Date();
+            document.getElementById("time").innerHTML = dt.toLocaleString();
+        </script>
+</body>
+
+</html>
