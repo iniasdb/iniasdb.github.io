@@ -34,7 +34,7 @@
 
     <script>
 
-        /*intialize coord variables*/
+        //intialize coord variables
         var x, y;
 
         //get image and get half size
@@ -49,11 +49,13 @@
         /*function to get mouse coordinates and draw*/
         function showCoords(event) {
 
-            console.log(imageHeightHalf);
-            x = event.clientX;
-            y = event.clientY;
+            /*x = event.clientX;
+            y = event.clientY;*/
+            x = event.clientX || event.pageX;
+            y = event.clientY || event.pageY;
+            console.log(x + " " + y)
 
-            ctx.drawImage(image, (x - imageWidthHalf), (y - imageHeightHalf), image.width, image.height);
+            ctx.drawImage(image, /*(x - imageWidthHalf), (y - imageHeightHalf),*/ x, y, image.width, image.height);
         }
 
     </script>
