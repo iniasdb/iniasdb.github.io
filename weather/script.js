@@ -20,7 +20,7 @@ var weatherIcon,
 const apiCall = async (city) => {
   var citySearch = city;
   const response = await fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q" +
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
       citySearch +
       "&units=metric&appid=a1b0b1d1ba758ad4a0971f19cc475c39"
   ); //make api call
