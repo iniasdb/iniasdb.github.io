@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="600">
+    <title>weather</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="apiCall('boom')">
+
+    <div class="bg" id="bg">
+        <div class="input">
+            <input type="text" id="city" onkeydown="changeCity(false)">
+            <button onclick="changeCity(true)">change city</button>
+        </div>
+        <div class="center">
+            <div class="time">
+                <p id="time"></p>
+                <div class="weather">
+                    <h1 id="location"></h1>
+                    <h1 id="temp"></h1>
+                    <h3>Feels like <span id="fl"></span> Wind <span id="wind"></span> Barometer <span
+                            id="pressure"></span>
+                    </h3>
+                    <h3>Visibility <span id="visibility"></span> Humidity <span id="humidity"></span> Cloudiness <span
+                            id="cloudiness"></span></h3>
+                    <h3>Sunrise <span id="sunrise"></span> Sunset <span id="sunset"></span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="hotbar">
+            <a href="https://www.facebook.com"><img src="images/fb.png"></a>
+            <a href="https://www.twitter.com/"><img src="images/twitter.png"></a>
+            <a href="https://www.instagram.com"><img src="images/instagram.jpg"></a>
+            <a href="https://www.reddit.com"><img src="images/reddit.jpg"></a>
+            <a href="https://www.github.com"><img src="images/github.jpg"></a>
+            <a href="https://www.codecademy.com"><img src="images/codecademy.jpg"></a>
+            <a href="https://www.theodinproject.com/"><img src="images/odin.png"></a>
+            <a href="http://localhost:3000/"><img src="images/localhost.png"></a>
+            <a href="https://atheneumboom-rvl.smartschool.be/login#!"><img src="images/smartschool.png"></a>
+            <a href="https://www.thrashermagazine.com"><img src="images/thrasher.jpg"></a>
+            <a href="https://www.youtube.com"><img src="images/youtube.png"></a>
+
+        </div>
+    </div>
+
+
+    <script>
+        var dt = new Date();
+        document.getElementById("time").innerHTML = dt.toLocaleString();
+    </script>
+</body>
+
+</html>
