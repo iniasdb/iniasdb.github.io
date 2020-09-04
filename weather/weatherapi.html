@@ -9,9 +9,20 @@
     <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon">
     <script type="text/javascript" src="script.js"></script>
+    
+    <script>
+        function updateTime() {
+            var interval = setInterval(flashTime, 1000);
+        }
+
+        function flashTime() {
+            var dt = new Date();
+            document.getElementById("time").innerHTML = dt.toLocaleString();
+        }
+    </script>
 </head>
 
-<body onload="apiCall('boom')">
+<body onload="apiCall('boom'); updateTime()">
 
     <div class="bg" id="bg">
         <div class="input">
@@ -48,12 +59,6 @@
 
         </div>
     </div>
-
-
-    <script>
-        var dt = new Date();
-        document.getElementById("time").innerHTML = dt.toLocaleString();
-    </script>
 </body>
 
 </html>
