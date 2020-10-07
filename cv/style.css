@@ -1,3 +1,14 @@
+.talen {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.talen #nl {
+  background-image: url("images/be.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
 .content {
   margin: 50px auto;
   width: 1225px;
@@ -40,14 +51,19 @@
   border-radius: 100%;
 }
 
+.info {
+  margin-left: 0px;
+  background-color: black;
+}
+
 .q {
   float: left;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .a {
   float: right;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 .inhoud {
@@ -60,6 +76,7 @@
   left: 16px;
   top: -5px;
   margin-bottom: -10px;
+  width: 725px;
 }
 
 .hobbys {
