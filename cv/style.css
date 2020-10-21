@@ -1,3 +1,70 @@
+@media only screen and (max-width: 480px) {
+  .talen #nl {
+    background-size: 30px !important;
+    width: 30px !important;
+    height: 15px !important;
+    margin-right: 3px;
+  }
+
+  .talen #fr {
+    background-size: 30px !important;
+    width: 30px !important;
+    height: 15px !important;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  hr {
+    margin-right: 0 !important;
+  }
+
+  .content {
+    width: 90% !important;
+    padding: 0 !important;
+  }
+
+  .persoonsgegevens {
+    padding: 0 !important;
+  }
+
+  .profilePic {
+    width: 250px !important;
+    margin: 0 30px !important;
+  }
+
+  .socials {
+    clear: both !important;
+  }
+
+  .q {
+    margin-left: 20px !important;
+  }
+
+  .a {
+    margin-right: 40px !important;
+  }
+
+  .inhoud {
+    margin-top: 25px !important;
+    clear: both;
+    left: 0 !important;
+    padding: 5px !important;
+    word-wrap: break-word !important;
+    width: 98% !important;
+  }
+}
+
 .talen {
   float: right;
   margin-bottom: 10px;
@@ -7,6 +74,23 @@
   background-image: url("images/be.png");
   background-size: 50px;
   background-repeat: no-repeat;
+  width: 50px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 3px;
+}
+
+.talen #fr {
+  background-image: url("images/fr.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .content {
