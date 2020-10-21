@@ -3,7 +3,12 @@
     background-size: 30px !important;
     width: 30px !important;
     height: 15px !important;
-    margin-right: 3px;
+  }
+
+  .talen #en {
+    background-size: 30px !important;
+    width: 30px !important;
+    height: 15px !important;
   }
 
   .talen #fr {
@@ -59,7 +64,7 @@
     margin-top: 25px !important;
     clear: both;
     left: 0 !important;
-    padding: 5px !important;
+    padding: 10px !important;
     word-wrap: break-word !important;
     width: 98% !important;
   }
@@ -72,6 +77,18 @@
 
 .talen #nl {
   background-image: url("images/be.png");
+  background-size: 50px;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 3px;
+}
+
+.talen #en {
+  background-image: url("images/uk.jpg");
   background-size: 50px;
   background-repeat: no-repeat;
   width: 50px;
