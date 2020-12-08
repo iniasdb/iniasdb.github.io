@@ -75,11 +75,54 @@ body {
   top: -250px;
 }
 
-/*
-.java,
-.htmlcss,
-.js,
-.python,
-.arduino {
-  visibility: hidden;
-}*/
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px (48rem to 64rem)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project {
+    width: 100%;
+    margin-left: 100px;
+    margin-bottom: 25px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .project {
+    width: 49%;
+    margin-bottom: 25px;
+    margin-left: 5px;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px (30.065rem to 47.93rem)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .project {
+    margin-left: 75px;
+    width: 100%;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px (20rem to 30rem)
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .projects {
+    width: 95%;
+  }
+  .project {
+    width: 100%;
+  }
+}
