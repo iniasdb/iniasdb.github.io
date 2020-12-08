@@ -1,0 +1,3 @@
+var java = new Map([["link", ["https://github.com/iniasdb/java-oefeningen" ,"https://github.com/iniasdb/java-oefeningen/tree/master/javafx/Yahtzee" ,"https://github.com/iniasdb/minesweeper" ,"https://github.com/iniasdb/autoclicker", "https://github.com/iniasdb/java-oefeningen/tree/master/sorting%20algorithms/src", "https://github.com/iniasdb/tictactoe", "https://github.com/iniasdb/levensspel", "https://github.com/iniasdb/ascii", "https://github.com/iniasdb/yoda"]], 
+            ["desc" , ["software oefeningen", "minesweeper", "autoclicker", "sorting algorithms", "tic tac toe", "levensspel", "image to ascii", "yodafy"]], 
+            ["negative numbers", [-1, -2, -3, -4]]]); 

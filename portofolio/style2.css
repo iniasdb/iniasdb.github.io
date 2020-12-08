@@ -1,0 +1,85 @@
+:root {
+  --bgColor: rgb(42, 42, 42);
+  --filterBorderColor: darkslategray;
+  --filterBgColor: rgb(64, 95, 95);
+  --filterHoverColor: rgb(71, 116, 116);
+  --cardBGColor: rgb(59, 59, 59);
+}
+
+body {
+  background-color: var(--bgColor);
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.language {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.language ul {
+  padding: 0;
+}
+
+.language ul li {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid var(--filterBorderColor);
+  background-color: var(--filterBgColor);
+  border-style: outset;
+  color: white;
+}
+
+.language ul li:hover {
+  cursor: pointer;
+  background-color: var(--filterHoverColor);
+}
+
+.projects {
+  width: 75%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.project {
+  background-size: cover;
+  width: 33%;
+  margin: 1px;
+  overflow: hidden;
+  float: left;
+  height: 250px;
+  animation-play-state: paused;
+}
+
+.project:hover img {
+  background-image: none;
+  opacity: 50%;
+  background-color: var(--cardBGColor);
+}
+
+.project:hover .project-info {
+  visibility: initial;
+}
+
+.project .project-info {
+  visibility: hidden;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  top: -250px;
+}
+
+/*
+.java,
+.htmlcss,
+.js,
+.python,
+.arduino {
+  visibility: hidden;
+}*/
