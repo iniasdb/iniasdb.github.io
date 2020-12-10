@@ -1,0 +1,22 @@
+.square {
+  width: 10px;
+  height: 10px;
+  float: left;
+}
+
+.board {
+  margin: 0 auto;
+  border: 5px solid black;
+  width: 400px;
+  height: 400px;
+  margin-top: 25px;
+}
+
+.controls {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.controls button {
+  margin: 0;
+}

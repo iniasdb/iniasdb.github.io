@@ -1,75 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>home</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link href="style2.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="content">
-        <div class="box" onclick="showList('java')">Java
-            <div class="list" id="java">
-                <ul>
-                    <li><a href="https://github.com/iniasdb/java-oefeningen" target="_blank">software oefeningen</a>
-                    </li>
-                    <li><a href="https://github.com/iniasdb/java-oefeningen/tree/master/javafx/Yahtzee"
-                            target="_blank">Yahtzee</a></li>
-                    <li><a href="https://github.com/iniasdb/minesweeper" target="_blank">minesweeper</a></li>
-                    <li><a href="https://github.com/iniasdb/autoclicker" target="_blank">autoclicker</a></li>
-                    <li><a href="https://github.com/iniasdb/java-oefeningen/tree/master/sorting%20algorithms/src"
-                            target="_blank">sorting algorithms</a></li>
-                    <li><a href="https://github.com/iniasdb/tictactoe" target="_blank">tic tac toe</a></li>
-                    <li><a href="https://github.com/iniasdb/levensspel" target="_blank">levensspel</a></li>
-                    <li><a href="https://github.com/iniasdb/ascii" target="_blank">image to ascii</a></li>
-                    <li><a href="https://github.com/iniasdb/yoda" target="_blank">yodafy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box" onclick="showList('htmlcss')">html & css
-            <div class="list" id="htmlcss">
-                <ul>
-                    <li><a href="https://github.com/iniasdb/oef-webdesign" target="_blank">webdesign oefeningen</a></li>
-                    <li><a href="https://github.com/iniasdb/weather" target="_blank">startpage</a></li>
-                    <li><a href="https://github.com/iniasdb/animations" target="_blank">animations stylesheet</a></li>
-                    <li><a href="https://iniasdb.github.io/portofolio/rbe2/home.html" target="_blank">rbe</a></li>
-                    <li><a href="https://iniasdb.github.io/portofolio/game/move.html" target="_blank">move game</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box" onclick="showList('js')">javascript
-            <div class="list" id="js">
-                <ul>
-                    <li><a href="https://iniasdb.github.io/portofolio/game/move.html" target="_blank">move</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="box" onclick="showList('python')">python
-            <div class="list" id="python">
-                <ul>
-                    <li><a href="https://github.com/iniasdb/snake" target="_blank">snake</a></li>
-                    <li><a href="https://github.com/tagwohl/twenny/tree/master/Windows" target="_blank">twenny
-                            (windows)</a></li>
-                </ul>
-            </div>
-        </div>
-        <a href="https://github.com/iniasdb/cpp/" target="_blank">
-            <div class="box"">c++
-        </div></a>
-    </div>
-    <script>
-        var i = 0;
 
-        function showList(x) {
-            if (i == 0) {
-                document.getElementById(x).style.display = 'initial';
-                i = 1;
-            } else {
-                document.getElementById(x).style.display = 'none';
-                i = 0;
+    <div class="content">
+        <div class="language">
+            <ul>
+                <li onclick="show('project', 16);">Show all</li>
+                <li onclick="show('java', 7);">Java</li>
+                <li onclick="show('htmlcss', 5);">HTML CSS</li>
+                <li onclick="show('js', 3);">JavaScript</li>
+                <li onclick="show('python', 2);">Python</li>
+                <li onclick="show('arduino', 1);">Arduino</li>
+            </ul>
+        </div>
+        <div class="projects">
+            <!--Java-->
+            <a href="https://github.com/iniasdb/java-oefeningen">
+                <div class="project java">
+                    <img src="images/java.png">
+                    <div class="project-info">
+                        <h1>Software oefeningen</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/java-oefeningen/tree/master/javafx/Yahtzee">
+                <div class="project java" id="Yahtzee">
+                    <img src="images/yahtzee.png">
+                    <div class="project-info">
+                        <h1>Yahtzee</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/minesweeper">
+                <div class="project java">
+                    <img src="images/minesweeper.png">
+                    <div class="project-info">
+                        <h1>Minesweeper</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/autoclicker">
+                <div class="project java">
+                    <img src="images/autoclicker.png">
+                    <div class="project-info">
+                        <h1>Autoclicker</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/java-oefeningen/tree/master/sorting%20algorithms/src">
+                <div class="project java">
+                    <img src="images/sorting.png">
+                    <div class="project-info">
+                        <h1>Sorting algorithms</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/tictactoe">
+                <div class="project java">
+                    <img src="images/tictactoe.png">
+                    <div class="project-info">
+                        <h1>Tic tac toe</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/levensspel">
+                <div class="project java">
+                    <img src="images/levensspel.png">
+                    <div class="project-info">
+                        <h1>Game of life</h1>
+                        <h3>Java</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!--HTML CSS-->
+            <a href="https://github.com/iniasdb/oef-webdesign">
+                <div class="project htmlcss">
+                    <img src="images/web.png">
+                    <div class="project-info">
+                        <h1>Webdesign oefeningen</h1>
+                        <h3>HTML CSS</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/weather">
+                <div class="project htmlcss js">
+                    <img src="images/weatherapp.png">
+                    <div class="project-info">
+                        <h1>Weather api startpage</h1>
+                        <h3>HTML CSS JavaScript</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://iniasdb.github.io/portofolio/rbe2/home.html">
+                <div class="project htmlcss">
+                    <img src="images/rbe.png">
+                    <div class="project-info">
+                        <h1>RBE Music</h1>
+                        <h3>HTML CSS</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/animations">
+                <div class="project htmlcss">
+                    <img src="images/animations.png">
+                    <div class="project-info">
+                        <h1>CSS animations stylesheet</h1>
+                        <h3>CSS</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://iniasdb.github.io/portofolio/etchASketch/index.html">
+                <div class="project htmlcss js">
+                    <img src="images/eas.png">
+                    <div class="project-info">
+                        <h1>Etch a Sketch</h1>
+                        <h3>HTML CSS JavaScript</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://iniasdb.github.io/portofolio/game/move.html">
+                <div class="project htmlcss js">
+                    <img src="images/move.png">
+                    <div class="project-info">
+                        <h1>Move game</h1>
+                        <h3>HTML CSS JavaScript</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!--Python-->
+            <a href="https://github.com/tagwohl/twenny/tree/master/Windows">
+                <div class="project python">
+                    <img src="images/twenny.png">
+                    <div class="project-info">
+                        <h1>Twenny (windows)</h1>
+                        <h3>Python</h3>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/iniasdb/snake">
+                <div class="project python">
+                    <img src="images/snake.png">
+                    <div class="project-info">
+                        <h1>Snake game</h1>
+                        <h3>Python</h3>
+                    </div>
+                </div>
+            </a>
+
+            <!--Arduino-->
+            <div class="project arduino">
+                <img src="images/arduino.png">
+                <div class="project-info">
+                    <h1>nothing here yet</h1>
+                    <h3>Arduino</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function show(x, y) {
+
+            for (var i = 0; i < 16; i++) {
+                document.querySelectorAll('.project')[i].style.display = "none";
             }
+
+            //console.log(hidden);
+
+            var className = "." + x;
+            console.log(className)
+            for (var i = 0; i < y; i++) {
+                document.querySelectorAll(className)[i].style.display = "initial";
+                console.log(i);
+            }
+            console.log("shown");
+            /*
+            var array = document.getElementsByClassName(className).length;
+            console.log(array);
+            */
         }
     </script>
+
 </body>
 
 </html>
