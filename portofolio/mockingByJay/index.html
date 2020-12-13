@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocking by Jay</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="index.php"><img src="images/logo.png"></a>
+        <ul>
+            <a href="#bookings">
+                <li>Bookings</li>
+            </a>
+            <a href="#artists">
+                <li>Our artists</li>
+            </a>
+            <a href="#aboutUs">
+                <li>Who are we</li>
+            </a>
+            <a href="#studio">
+                <li>Book a session</li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="landing">
+            <div class="name">
+                <h1>Mocking by Jay</h1>
+            </div>
+            <img src="images/rapper.png">
+        </div>
+
+        <div class="bookings" id="bookings">
+            <div class="form">
+                <form>
+                    Name:<input type="text" name="name" placeholder="name"><br>
+                    Event name: <input type="text" name="event" placeholder="event name"><br>
+                    Email: <input type="email" name="email" placeholder="email"><br>
+                    Phone: <input type="tel" name="tel" placeholder="phone number"><br>
+                    Artist to book: <input type="artist" name="artist" placeholder="artist"><br>
+                    Date: <input type="date" name="date"><br>
+                    Additional information:<textarea></textarea><br>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <div class="artists">
+                <h1>Book our artists</h1>
+            </div>
+        </div>
+
+        <div class="aboutArtists" id="artists">
+            <div class="aboutArtistsName">
+                <h1>About our artists</h1>
+            </div>
+            <div class="aboutArtistsText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorum temporibus pariatur possimus
+                    aliquid tempora rem alias commodi? Dolorem, sit qui deserunt eius maxime temporibus facere
+                    exercitationem culpa explicabo voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ea velit quas alias cumque aut sed earum quis, odio sapiente est officiis sunt ducimus.
+                    Consequuntur, illum! Facere expedita ullam quisquam quibusdam.</p>
+            </div>
+        </div>
+
+        <div class="aboutUs" id="aboutUs">
+            <div class="aboutUsText">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolorum temporibus pariatur possimus
+                    aliquid tempora rem alias commodi? Dolorem, sit qui deserunt eius maxime temporibus facere
+                    exercitationem culpa explicabo voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ea velit quas alias cumque aut sed earum quis, odio sapiente est officiis sunt ducimus.
+                    Consequuntur, illum! Facere expedita ullam quisquam quibusdam.</p>
+            </div>
+            <div class="aboutUsName">
+                <h1>About Mocking by Jay</h1>
+            </div>
+        </div>
+
+        <div class="studio" id="studio">
+            <div class="studioName">
+                <h1>Book a studio session</h1>
+            </div>
+            <img src="images/studio.png">
+            <div class="studioBooking">
+                <div class="studioText">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quos a adipisci odit veniam esse
+                        alias at repudiandae nemo similique pariatur incidunt magnam reprehenderit aperiam dolores,
+                        natus,
+                        sequi delectus facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, dolore
+                        facere! Earum autem temporibus ad quo. Nobis quaerat rem doloremque ipsa sed! Rem reprehenderit
+                        esse
+                        dolor fugit ipsa? Omnis, repudiandae?</p>
+                </div>
+                <div class="studioForm">
+                    <div class="price">
+                        <h2>€30.00 <span>per hour</span></h2>
+                        <p>3 hr. minimum</p>
+                    </div>
+                    <form>
+                        Date:<br>
+                        <input type="date" name="date" id="date"><br>
+                        <div class="start">
+                            Start time:<br>
+                            <input type="time" name="startTime" class="time">
+                        </div>
+                        <div class="end">
+                            End time:<br>
+                            <input type="time" name="endTime" class="time"><br>
+                        </div>
+                        Name: <input type="text" name="name" placeholder="name"><br>
+                        Email: <input type="text" name="text" placeholder="email"><br>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&#169 Inias De Belder - <span id="y"></span></p>
+    </div>
+
+    <div class="backToTop" onclick="location.href='index.html'">
+        <p>to top</p>
+    </div>
+
+    <script>
+        var yearHtml = document.getElementById("y");
+        var date = new Date();
+        var year = date.getFullYear();
+        yearHtml.innerHTML = year;
+    </script>
+
+</body>
+
+</html>
