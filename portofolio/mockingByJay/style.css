@@ -275,3 +275,75 @@ form button {
   font-size: 20px;
   text-align: center;
 }
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px (48rem to 64rem)
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav ul li {
+    display: none;
+  }
+
+  .landing {
+    height: 60vh !important;
+  }
+
+  .landing h1 {
+    z-index: 2;
+  }
+
+  .landing img {
+    margin-top: 100px;
+    z-index: 1;
+  }
+
+  .bookings {
+    height: 20vh !important;
+  }
+
+  .bookings .artists {
+    margin-top: -1000px;
+  }
+
+  .aboutUs {
+    height: 40vh !important;
+  }
+
+  .aboutUs .aboutUsName {
+    margin-top: -1000px;
+  }
+
+  .aboutUs .aboutUsText {
+    margin-top: 300px;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .bookings .artists {
+    margin-top: -500px;
+    width: 100px !important;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px (30.065rem to 47.93rem)
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 480px (20rem to 30rem)
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+}
